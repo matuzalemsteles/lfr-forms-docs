@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/lfr-forms-docs",
   siteMetadata: {
     title: `Liferay Forms - Documentação`,
     description: `Documentação da arquitetura utilizada para implementar o Liferay Forms.`,
