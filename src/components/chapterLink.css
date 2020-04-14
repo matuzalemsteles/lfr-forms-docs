@@ -1,0 +1,13 @@
+.chapter-link a {
+    color: #272833;
+    text-decoration: none;
+}
+
+.chapter-link a:visited {
+    color: #6B6C7E;
+    text-decoration: none;
+}
+
+.chapter-link .chapter-index {
+    font-size: 150%;
+}

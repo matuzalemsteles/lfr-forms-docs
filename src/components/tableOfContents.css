@@ -1,0 +1,15 @@
+.table-of-contents {
+    padding: 2rem 0;
+}
+
+.table-of-contents-chapter {
+    margin-bottom: 2rem;
+}
+
+.table-of-contents .chapter-link {
+    font-size: 125%;
+}
+
+.table-of-contents .chapter-description {
+    padding-left: 1rem;
+}
