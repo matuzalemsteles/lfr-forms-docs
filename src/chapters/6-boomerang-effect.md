@@ -21,3 +21,9 @@ Para causar um efeito de reação bumerangue é quando o componente consumidor a
 ## Communication
 
 A comunicação do consumer para o Provider é feita via eventos "pub/sub", os consumidores envia eventos para o Provider (isso para evitar renderizações desnecessarias) e o provider pode enviar para todos os consumidores as novas informações, isso pode ser feito via pub para que chegue até os componentes sem causar renderizações a abaixo dos providers.
+
+## Forms case
+
+<img src="/boomerang.png" />
+
+O caso do Forms segue apenas com um Provider que é o LayoutProvider, a Sidebar e o Form Builder são os componentes que precisam da mesma informação, por isso temos um Provider que manipula os dados e depois desce com esses novos dados para os dois lados (Sidebar e Form Builder).
