@@ -38,12 +38,7 @@ this.emit(‘fieldEdited’, () => {
 // Ao emitir utilizando essa função, todos os componentes que estão escutando o evento de `fieldEdited` irão ser disparados.
 ```
 
-
 ** Para melhor compreensão, nossos EventEmitters/funções `emit` são nossos Publishers e as nossas funções `on` são nossos Subscribers. **
-
-O padrão Observer pode causar vários vazamentos de memória, conhecidos como: [Lapsed listener problem - Wikipedia](https://en.wikipedia.org/wiki/Lapsed_listener_problem), em que se não forem removidos todos os listeners ao remover algum componente, podemos deixar vários listeners atachados no browser que não estão sendo mais utilizados e fazer com que o número de funções chamadas quando determinado componente for chamado cresça de forma exponencial.
-
-Um tratamento para isso é adicionar no Lifecycle disposed do Metal.js o método `removeAllListeners`, se estiver usando o metal-events. No contexto de React, como o evento é sintético(um evento criado e gerenciado pelo próprio React) todos os listeners de evento são removidos quando o componente é destruído.
 
 # Quais formas de lidar com eventos que temos no Forms?
 
@@ -53,3 +48,7 @@ Um tratamento para isso é adicionar no Lifecycle disposed do Metal.js o método
  [metal.js/packages/metal-events at master · metal/metal.js · GitHub](https://github.com/metal/metal.js/tree/master/packages/metal-events)
 
 * Nas partes que utilizam React, é usada a maneira padrão do React e quando necessário, passado alguma função de metal-events via props ou por Adapter para escutar/emitir eventos.
+
+O padrão Observer pode causar vários vazamentos de memória, conhecidos como: [Lapsed listener problem - Wikipedia](https://en.wikipedia.org/wiki/Lapsed_listener_problem), em que se não forem removidos todos os listeners ao remover algum componente, podemos deixar vários listeners atachados no browser que não estão sendo mais utilizados e fazer com que o número de funções chamadas quando determinado componente for chamado cresça de forma exponencial.
+
+Tanto o Metal quanto o React, conseguem remover os event listeners que foram adicionados por eles durante a etapa de destruição do componente. Entretanto, ao utilizar os métodos de lidar com eventos do `metal-dom`, para tratar de eventos na DOM, se faz necessário chamar o método this.${variável_do_meu_event_handler}.removeAllListeners() no Lifecycle da etapa de desconstrução do componente(disposed).
