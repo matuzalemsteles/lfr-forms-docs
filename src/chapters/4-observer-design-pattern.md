@@ -1,8 +1,8 @@
 ---
-path: “/observer-design-pattern”
+path: "/observer-design-pattern"
 
 order: 4
-title: “Padrão de Projeto: Observer”
+title: "Padrão de Projeto: Observer"
 ---
 
 # O que esse padrão resolve?
