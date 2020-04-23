@@ -9,7 +9,7 @@ title: "História"
 
 O portlet de Forms que temos hoje no Liferay DXP é um reflexo de evoluções e adaptações de soluções mais antigas desenvolvidas pela Liferay. Em meados de 2010, Michael Han percebeu nos nossos clientes a necesidade de se adaptar o banco de dados do Liferay para suportar customizações que eram muito comuns ao se implantar um sistema com Liferay. Baseado nessa necessidade, ele idealizou um sistema onde um usuário poderia modelar um banco de dados utilizando a própria UI do Liferay sem a necessidade de programação ou de alterar o banco de dados do próprio Liferay através de SQL.
 
-Esse sistema recebeu o nome de Dynamic Data Lists. Com ele veio a [primeira implementação de um Form Builder pela Liferay](https://github.com/liferay/alloy-ui/commit/99b3c5d0d09c1867e8b9962ea4fe95f383611b07#diff-ef9f2ea7373eb89698ac6953359e5a8d). Um componente que se utlizava de Drag and Drop onde o usuário poderia arrastar os campos do banco de dados que desejava criar. A implementação foi feita utilizando o framework adotado pela Liferay na época: [AlloyUI](http://alloyui.com/).
+Esse sistema recebeu o nome de Dynamic Data Lists. Com ele veio a [primeira implementação de um Form Builder pela Liferay](https://github.com/liferay/alloy-ui/commit/99b3c5d0d09c1867e8b9962ea4fe95f383611b07#diff-ef9f2ea7373eb89698ac6953359e5a8d). Um componente que se utilizava de Drag and Drop onde o usuário poderia arrastar os campos do banco de dados que desejava criar. A implementação foi feita utilizando o framework adotado pela Liferay na época: [AlloyUI](http://alloyui.com/).
 
 # Tá! E o que aconteceu de lá pra cá?
 
@@ -26,4 +26,3 @@ Foi então que a impementação que temos hoje começou a ser feita. O prazo era
 # Resumo da ópera
 
 Essa história toda é pra dizer que o Forms é uma aplicação complexa, com muita bagagem histórica e várias reescritas por pessoas diferentes e às vezes sem muito conhecimento das ferramentas (porque essas ferramentas não viveram o suficiente para serem bem documentadas). Isso faz com que o código possa não fazer sentido muitas vezes, mas o intuito desse documento é justamente tentar esclarecer o que estiver sombrio :)
-
